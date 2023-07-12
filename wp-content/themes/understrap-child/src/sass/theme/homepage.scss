@@ -1,0 +1,248 @@
+.wrapper {
+    padding: 0;
+}
+
+nav {
+    padding: 13px;
+
+    .ms_logo-links {
+        gap: 45px;
+    
+        .ms_nav-items {
+            font-size: 16px;
+            font-weight: 600;
+            gap: 30px;
+    
+            .ms_nav-item {
+                gap: 10px;
+            }
+        }
+    }
+    
+}
+
+.ms_blue-button {
+    background-color: #2D8CCC;
+    padding: 12px 26px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    border-radius: 30px;
+    border: none;
+}
+
+.ms_white-button {
+    background-color: white;
+    padding: 12px 26px;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    border-radius: 30px;
+    border: none;
+}
+
+.ms_hero {
+    background-image: url(http://localhost:3000/wp-content/uploads/2023/07/mani-che-tengono-il-concetto-di-soluzione-dei-problemi-di-affari-di-puzzle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 184px 0;
+
+    .ms_hero-wrapper {
+        max-width: 458px;
+        
+        h2 {
+            font-size: 36px;
+            font-size: 700;
+        }
+    
+        .ms_hero-title {
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+    }
+
+}
+
+.ms_first-section {
+    padding: 90px 0;
+    
+    h3 {
+        color: #2B2C2C;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        color: #2B2C2C;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 45px;
+    }
+
+    img {
+        margin-right: 30px;
+        width: 653px;
+    }
+
+    p {
+        color: #888;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 35px;
+    }
+}
+
+.ms_second-section {
+    background-color: #F5F6F7;
+    padding: 60px 0 90px;
+
+    h3 {
+        color: #2B2C2C;
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        color: #2B2C2C;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 35px;
+    }
+
+    .card {
+        border-radius: 38px 0;
+        border: none;
+        padding: 35px 35px 25px;
+
+        img {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        h4 {
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.ms_third-section {
+    background-color: #3CB07D;
+    color: white;
+    padding: 60px 0;
+
+    h3 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 35px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 35px;
+    }
+
+    img {
+        width: 100%;
+        margin-left: 30px;
+    }
+}
+
+footer {
+    padding: 0 0 90px;
+
+    .ms_yellow-bg {
+        background-color: #F5BF2F;
+        padding: 90px 0;
+        margin-bottom: 90px;
+
+        .ms_cta {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 34px;
+            width: 360px;
+        }
+
+        .ms_text-input {
+            border-radius: 45px;
+            height: 57px;
+            border: none;
+            width: 360px;
+            padding: 18px 25px;
+            margin-left: 30px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            position: absolute;
+            right: 261px;
+            top: 3px;
+        }
+
+        .ms_privacy-check {
+            margin-left: 30px;
+            width: 360px;
+
+            span {
+                display: inline-block;
+                margin-left: 6px;
+
+                a {
+                    color: currentColor;
+                }
+            }
+        }
+    }
+
+    .ms_footer-logo {
+        margin-bottom: 35px;
+    }
+
+    .ms_footer-link {
+        text-decoration: none;
+        color: currentColor;
+        font-weight: 700;
+        font-size: 16px;
+        margin-right: 30px;
+    }
+
+    .ms_socials {
+        gap: 15px;
+    }
+}
+
+.ms_footer-content {
+    margin-bottom: 58px;
+}
+
+.ms-footer-links-1 {
+    margin-bottom: 28px;
+}
+
+.ms_footer-end {
+    
+    &::before {
+        margin-bottom: 52px;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(43, 44, 44, 0.10);
+    }
+}
+
