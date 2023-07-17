@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21" fill="none">
+  <g id="Group 814">
+    <g id="Group 11">
+      <line id="Line 1" x1="1" y1="1" x2="27" y2="1" stroke="#2D8CCC" stroke-width="2" stroke-linecap="round"></line>
+      <line id="Line 3" x1="1" y1="10.5" x2="27" y2="10.5" stroke="#2D8CCC" stroke-width="2" stroke-linecap="round"></line>
+      <line id="Line 4" x1="1" y1="20" x2="27" y2="20" stroke="#2D8CCC" stroke-width="2" stroke-linecap="round"></line>
+    </g>
+  </g>
+</svg>

@@ -30,14 +30,14 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 	<header id="wrapper-navbar">
 
 		
-		<a class="skip-link <?php echo understrap_get_screen_reader_class( true ); ?>" href="#content">
+		<!-- <a class="skip-link <?php echo understrap_get_screen_reader_class( true ); ?>" href="#content">
 			<?php esc_html_e( 'Skip to content', 'understrap' ); ?>
-		</a>
+		</a> -->
 		
-		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>
+		<?php /* get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); */ ?>
 		
 		<nav>
-			<div class="container">
+			<div class="container ms_container">
 				<div class="row justify-content-between align-items-center">
 					<div class="col d-flex align-items-center ms_logo-links">
 						<img src="<?php the_field('logo') ?>" alt="logo">
@@ -49,10 +49,10 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 									$link_1_url = $link_1['url'];
 									$link_1_title = $link_1['title'];
 									?>
-								<a href=”<?php echo esc_url( $link_1_url ); ?>” ><?php echo 
+								<a class="ms_nav-link" href=”<?php echo esc_url( $link_1_url ); ?>” ><?php echo 
 								esc_html( $link_1_title ); ?></a>
 								<?php endif; ?>
-								<img src="http://localhost:3000/wp-content/uploads/2023/07/Vector-1.png" alt="">
+								<img src="http://localhost:3000/wp-content/uploads/2023/07/Vector-1.svg" alt="">
 							</div>
 							<div class="d-flex ms_nav-item align-items-center">
 								<?php 
@@ -61,10 +61,10 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 									$link_2_url = $link_2['url'];
 									$link_2_title = $link_2['title'];
 									?>
-								<a href=”<?php echo esc_url( $link_2_url ); ?>” ><?php echo 
+								<a class="ms_nav-link" href=”<?php echo esc_url( $link_2_url ); ?>” ><?php echo 
 								esc_html( $link_2_title ); ?></a>
 								<?php endif; ?>
-								<img src="http://localhost:3000/wp-content/uploads/2023/07/Vector-1.png" alt="">
+								<img src="http://localhost:3000/wp-content/uploads/2023/07/Vector-1.svg" alt="">
 							</div>
 							<div>
 								<?php 
@@ -73,7 +73,7 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 									$link_3_url = $link_3['url'];
 									$link_3_title = $link_3['title'];
 									?>
-								<a href=”<?php echo esc_url( $link_3_url ); ?>” ><?php echo 
+								<a class="ms_nav-link" href=”<?php echo esc_url( $link_3_url ); ?>” ><?php echo 
 								esc_html( $link_3_title ); ?></a>
 								<?php endif; ?>
 							</div>
@@ -84,16 +84,19 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 									$link_4_url = $link_4['url'];
 									$link_4_title = $link_4['title'];
 									?>
-								<a href=”<?php echo esc_url( $link_4_url ); ?>” ><?php echo 
+								<a class="ms_nav-link" href=”<?php echo esc_url( $link_4_url ); ?>” ><?php echo 
 								esc_html( $link_4_title ); ?></a>
 								<?php endif; ?>
 							</div>
 						</div>
 					</div>
-					<div class="col-auto">
+					<div class="ms_button-wrapper col-auto">
 						<button class="ms_blue-button">
 							<?php the_field('button') ?>
 						</button>
+					</div>
+					<div class="ms_hamburger col-auto">
+						<img src="http://localhost:3000/wp-content/uploads/2023/07/Group-814.svg" alt="">
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+  <g id="Social">
+    <g id="FB">
+      <circle id="Ellipse 10" cx="15" cy="15" r="15" fill="#2B2C2C"></circle>
+      <path id="Vector" d="M18.4757 16L18.8906 13.1044H16.2968V11.2253C16.2968 10.4331 16.6591 9.66094 17.8208 9.66094H19V7.19563C19 7.19563 17.9299 7 16.9068 7C14.7707 7 13.3744 8.38688 13.3744 10.8975V13.1044H11V16H13.3744V23H16.2968V16H18.4757Z" fill="white"></path>
+    </g>
+  </g>
+</svg>

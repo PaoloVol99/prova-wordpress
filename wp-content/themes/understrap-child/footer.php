@@ -19,14 +19,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <footer>
 		<div class="ms_yellow-bg">
-			<div class="container">
-				<div class="d-flex align-items-start justify-content-center">
-					<div class="col-6 d-flex justify-content-end">
+			<div class="container ms_container">
+				<div class="row align-items-start justify-content-center">
+					<div class="ms_cta-wrapper col-sm-12 col-md-6 d-flex">
 						<div class="ms_cta">
 							<?php the_field('footer_subscribe_title') ?>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-sm-12 col-md-6">
 						<div class="position-relative">
 							<input class="ms_text-input" type="text" placeholder="La tua email">
 							<button class="ms_blue-button"><?php the_field('footer_subscribe_button') ?></button>
@@ -39,18 +39,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div class="ms_footer-content d-flex align-items-end justify-content-between">
+		<div class="container ms_container">
+			<div class="ms_footer-content d-flex flex-wrap align-items-end justify-content-between">
 				<div>
 					<img class="ms_footer-logo" src="<?php the_field('footer-logo'); ?>" alt="logo">
-					<div class="ms-footer-links-1 d-flex">
+					<div class="ms_footer-links-1 d-flex flex-wrap">
 						<?php 
 						$link_1 = get_field('footer_link_1');
 						if( $link_1 ): 
 							$link_1_url = $link_1['url'];
 							$link_1_title = $link_1['title'];
 							?>
-						<a class="ms_footer-link" href=”<?php echo esc_url( $link_1_url ); ?>” ><?php echo 
+						<a class="ms_footer-link col-xs-12" href=”<?php echo esc_url( $link_1_url ); ?>” ><?php echo 
 						esc_html( $link_1_title ); ?></a>
 						<?php endif; ?>
 						<?php 
@@ -72,7 +72,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						esc_html( $link_3_title ); ?></a>
 						<?php endif; ?>
 					</div>
-					<div class="d-flex">
+					<div class="ms_footer-links-2 d-flex flex-wrap">
 						<?php 
 						$link_4 = get_field('footer_link_4');
 						if( $link_4 ): 
@@ -109,12 +109,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 			<div class="ms_footer-end">
-				indirizzo
+				<div class="d-flex flex-wrap justify-content-between">
+					<span class="ms_address"><?php the_field('footer_address') ?></span>
+					<span class="ms_privacy"><?php the_field('footer_privacy') ?></span>
+				</div>
 			</div>
 		</div>
 	</footer>
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<!-- <div class="<?php echo esc_attr( $container ); ?>">
 
 		<div class="row">
 
@@ -124,7 +127,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						<?php understrap_site_info(); ?> -->
 
 					</div><!-- .site-info -->
 

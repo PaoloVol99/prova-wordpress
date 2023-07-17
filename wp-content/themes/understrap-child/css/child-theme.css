@@ -15398,6 +15398,11 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 
 nav {
   padding: 13px;
+  position: fixed;
+  background-color: white;
+  right: 0;
+  left: 0;
+  z-index: 999;
 }
 nav .ms_logo-links {
   gap: 45px;
@@ -15409,6 +15414,13 @@ nav .ms_logo-links .ms_nav-items {
 }
 nav .ms_logo-links .ms_nav-items .ms_nav-item {
   gap: 10px;
+}
+nav .ms_logo-links .ms_nav-link {
+  text-decoration: none;
+  color: currentColor;
+}
+nav .ms_hamburger {
+  display: none;
 }
 
 .ms_blue-button {
@@ -15447,9 +15459,24 @@ nav .ms_logo-links .ms_nav-items .ms_nav-item {
   font-size: 700;
 }
 .ms_hero .ms_hero-wrapper .ms_hero-title {
-  font-size: 46px;
+  font-size: 54px;
   font-weight: 700;
   margin-bottom: 35px;
+}
+.ms_hero .ms_arrow-left,
+.ms_hero .ms_arrow-right {
+  bottom: calc(50% - 38.5px);
+  transform: translateY(50%);
+  background-color: rgba(244, 245, 245, 0.2);
+  padding: 15px 12px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+.ms_hero .ms_arrow-left {
+  left: 30px;
+}
+.ms_hero .ms_arrow-right {
+  right: 30px;
 }
 
 .ms_first-section {
@@ -15467,6 +15494,9 @@ nav .ms_logo-links .ms_nav-items .ms_nav-item {
   font-weight: 700;
   margin-bottom: 45px;
 }
+.ms_first-section h1 span, .ms_first-section .h1 span {
+  color: #2D8CCC;
+}
 .ms_first-section img {
   margin-right: 30px;
   width: 653px;
@@ -15475,6 +15505,12 @@ nav .ms_logo-links .ms_nav-items .ms_nav-item {
   color: #888;
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 35px;
+}
+.ms_first-section .ms_first-section-content .col-7 {
+  flex-shrink: 0;
+}
+.ms_first-section .ms_first-section-content button {
   margin-bottom: 35px;
 }
 
@@ -15498,6 +15534,7 @@ nav .ms_logo-links .ms_nav-items .ms_nav-item {
   border-radius: 38px 0;
   border: none;
   padding: 35px 35px 25px;
+  z-index: 1;
 }
 .ms_second-section .card img {
   margin-bottom: 25px;
@@ -15509,11 +15546,24 @@ nav .ms_logo-links .ms_nav-items .ms_nav-item {
 .ms_second-section .card p {
   margin-bottom: 20px;
 }
+.ms_second-section .ms_dots-container {
+  overflow: hidden;
+}
+.ms_second-section .ms_dots {
+  gap: 23.974px;
+  position: absolute;
+  z-index: 0;
+  bottom: -90px;
+  overflow-x: hidden;
+  right: 0;
+  left: 0;
+}
 
 .ms_third-section {
   background-color: #3CB07D;
   color: white;
   padding: 60px 0;
+  z-index: 1;
 }
 .ms_third-section h3, .ms_third-section .h3 {
   font-size: 22px;
@@ -15530,9 +15580,11 @@ nav .ms_logo-links .ms_nav-items .ms_nav-item {
   line-height: 30px;
   margin-bottom: 35px;
 }
+.ms_third-section button {
+  margin-bottom: 45px;
+}
 .ms_third-section img {
   width: 100%;
-  margin-left: 30px;
 }
 
 footer {
@@ -15543,11 +15595,14 @@ footer .ms_yellow-bg {
   padding: 90px 0;
   margin-bottom: 90px;
 }
-footer .ms_yellow-bg .ms_cta {
+footer .ms_yellow-bg .ms_cta-wrapper {
+  justify-content: end;
+}
+footer .ms_yellow-bg .ms_cta-wrapper .ms_cta {
   font-size: 30px;
   font-weight: 700;
   line-height: 34px;
-  width: 360px;
+  max-width: 360px;
 }
 footer .ms_yellow-bg .ms_text-input {
   border-radius: 45px;
@@ -15560,12 +15615,12 @@ footer .ms_yellow-bg .ms_text-input {
 }
 footer .ms_yellow-bg button {
   position: absolute;
-  right: 261px;
+  right: 159px;
   top: 3px;
 }
 footer .ms_yellow-bg .ms_privacy-check {
   margin-left: 30px;
-  width: 360px;
+  max-width: 360px;
 }
 footer .ms_yellow-bg .ms_privacy-check span {
   display: inline-block;
@@ -15587,12 +15642,21 @@ footer .ms_footer-link {
 footer .ms_socials {
   gap: 15px;
 }
+footer .ms_address,
+footer .ms_privacy {
+  color: #888;
+  font-size: 16px;
+}
+footer .ms_privacy a {
+  color: #888;
+  font-size: 16px;
+}
 
 .ms_footer-content {
   margin-bottom: 58px;
 }
 
-.ms-footer-links-1 {
+.ms_footer-links-1 {
   margin-bottom: 28px;
 }
 
@@ -15603,6 +15667,113 @@ footer .ms_socials {
   width: 100%;
   height: 1px;
   background-color: rgba(43, 44, 44, 0.1);
+}
+
+@media all and (min-width: 1401px) {
+  .ms_container {
+    max-width: 1140px;
+  }
+}
+@media all and (max-width: 1199px) {
+  .ms_yellow-bg button {
+    right: 69px !important;
+  }
+}
+@media all and (max-width: 991px) {
+  .ms_nav-items {
+    display: none !important;
+  }
+  .ms_hamburger {
+    display: block !important;
+  }
+  .ms_button-wrapper {
+    display: none;
+  }
+  .ms_text-input {
+    margin-left: auto !important;
+  }
+  .ms_footer-links-2 {
+    margin-bottom: 36px;
+  }
+  .ms_yellow-bg button {
+    right: -21px !important;
+  }
+}
+@media all and (max-width: 767px) {
+  .ms_cta-wrapper {
+    justify-content: start !important;
+  }
+  .ms_yellow-bg .ms_text-input {
+    margin-top: 30px;
+    width: 100% !important;
+  }
+  .ms_yellow-bg button {
+    margin-top: 30px;
+    right: 3px !important;
+  }
+  .ms_yellow-bg .ms_privacy-check {
+    margin-left: 0 !important;
+  }
+}
+@media all and (max-width: 575px) {
+  .ms_yellow-bg .ms_text-input {
+    margin-left: 0 !important;
+    margin-top: 30px;
+    width: 100% !important;
+  }
+  .ms_yellow-bg .ms_cta-wrapper {
+    justify-content: start !important;
+  }
+  .ms_yellow-bg button {
+    margin-top: 30px;
+    right: 3px !important;
+    top: 3px !important;
+  }
+  .ms_yellow-bg .ms_privacy-check {
+    margin-left: 0 !important;
+  }
+  .ms_footer-links-1 {
+    margin-bottom: 0 !important;
+  }
+  .ms_footer-link {
+    width: 100% !important;
+    margin-bottom: 24px;
+  }
+  .ms_footer-links-2 {
+    margin-bottom: 36px;
+  }
+  .ms_first-section img {
+    margin-right: 0;
+  }
+  .ms_address {
+    margin-bottom: 35px;
+  }
+  .ms_hero {
+    background-image: none;
+    padding: 112px 0;
+  }
+  .ms_hero .ms_hero-wrapper h2, .ms_hero .ms_hero-wrapper .h2 {
+    color: #2D8CCC;
+  }
+  .ms_hero .ms_hero-wrapper .ms_hero-title {
+    color: #2B2C2C;
+  }
+  .ms_hero .ms_hero-image {
+    display: block !important;
+    margin-bottom: 35px;
+  }
+  .ms_hero .ms_arrow-left,
+  .ms_hero .ms_arrow-right {
+    bottom: 0;
+    background-color: #F4F5F5;
+    color: #2B2C2C;
+    bottom: 0;
+    transform: translateY(-50%);
+  }
+  .ms_hero .ms_arrow-left {
+    right: 87px !important;
+    left: auto;
+  }
 }
 
 /*# sourceMappingURL=child-theme.css.map */
